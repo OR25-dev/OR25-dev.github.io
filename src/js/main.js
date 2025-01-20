@@ -54,7 +54,7 @@ scene.add(ambientLight2);
 const loader = new GLTFLoader();
 let donutModel;
 
-loader.load('glb/lucaauto.glb', (gltf) => {
+loader.load('glb/Donut.glb', (gltf) => {
     console.log('Modell geladen:', gltf);
     donutModel = gltf.scene;
     scene.add(donutModel);
