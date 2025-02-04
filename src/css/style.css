@@ -289,9 +289,6 @@ button:hover {
   }
 }
 
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,200&display=swap');
-
 @keyframes blendin {
     0% {
         opacity: 0;
@@ -421,18 +418,6 @@ video {
 /* Media Queries for mobile responsiveness */
 @media (max-width: 768px) {
     /* Adjust font sizes for mobile */
-    #text {
-        font-size: 2.5rem;  /* Smaller text on mobile */
-    }
-
-    .heading {
-        font-size: 2.2rem;  /* Smaller heading on mobile */
-    }
-
-    .paragraph {
-        font-size: 1.2rem;  /* Smaller paragraph text on mobile */
-        padding: 0 5%;       /* Less padding on mobile */
-    }
 
     .navbar ul {
         display: none;
@@ -475,7 +460,7 @@ video {
 
     /* Adjust model size */
     #donut, #second-model {
-        height: 250px;  /* Adjust model height for mobile */
+        
     }
 }
 
@@ -507,18 +492,5 @@ video {
     100% {
       transform: translateX(0);
       opacity: 1;
-    }
-  }
-
-  /* Responsivität für kleinere Bildschirme */
-  @media (max-width: 768px) {
-    #text {
-      font-size: 3rem; /* Kleinere Schriftgröße auf Tablets */
-    }
-  }
-
-  @media (max-width: 480px) {
-    #text {
-      font-size: 2.5rem; /* Noch kleinere Schriftgröße auf Handys */
     }
   }
