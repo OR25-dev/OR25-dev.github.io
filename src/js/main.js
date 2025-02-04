@@ -163,9 +163,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.getElementById('nav-links');
 
     hamburgerMenu.addEventListener('click', function() {
-        navLinks.classList.toggle('show');
+        navLinks.classList.toggle('show'); // Toggle die 'show'-Klasse
     });
 });
+
 
 let currentIndex = 0;
 const slides = document.querySelectorAll('.image-slider img');

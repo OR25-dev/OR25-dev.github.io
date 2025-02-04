@@ -55,12 +55,19 @@ canvas {
 }
 
 .navbar {
+    display: block;
+    position: relative;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 25px;
     padding: 10px 20px;
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 100%;
     box-shadow: 0 5px 40px rgba(255, 255, 255, 0.2);
+}
+
+.stickynav {
+    position: fixed;
+    margin: auto;
 }
 
 .navbar ul {
@@ -223,7 +230,7 @@ button:hover {
 }
 
 .smaller {
-    font-size: 2.3rem; /* Adjust font size */
+    font-size: 2.1rem; /* Adjust font size */
     text-align: center;
 }
 
@@ -494,3 +501,67 @@ video {
       opacity: 1;
     }
   }
+
+  .stickynav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center; /* Navbar horizontal zentrieren */
+    align-items: center; /* Vertikale Ausrichtung */
+    width: 100%;
+    padding: 10px 20px;
+  }
+  
+  #nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Zentriert die Links innerhalb der Navbar */
+    gap: 20px; /* Abstand zwischen den Links */
+    margin-left: 0;
+    transition: transform 0.3s ease; /* Weiches Einblenden */
+  }
+  
+  #nav-links li {
+    display: inline-block;
+  }
+
+  
+  /* Hamburger-Menü */
+  .hamburger-menu {
+    display: none; /* Standardmäßig auf großen Bildschirmen ausblenden */
+    cursor: pointer;
+  }
+  
+  .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+  }
+  
+  /* Media Query für kleinere Bildschirme */
+  @media (max-width: 768px) {
+    /* Navbar links ausblenden, wenn der Bildschirm klein ist */
+    #nav-links {
+      display: none; /* Verstecke die Links */
+      flex-direction: column; /* Staple die Links vertikal */
+      width: 100%; /* Nimmt die volle Breite ein */
+      align-items: center; /* Zentriert die Links */
+    }
+  
+    /* Hamburger-Menü anzeigen */
+    .hamburger-menu {
+      display: block;
+    }
+  
+    /* Zeigt das Menü an, wenn die .show Klasse hinzugefügt wird */
+    #nav-links.show {
+      display: flex;
+    }
+  }
+  
