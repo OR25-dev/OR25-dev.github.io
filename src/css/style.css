@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,200&display=swap');
+
+@keyframes blendin {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    color: white;
+}
+
+body {
+    font-family: Roboto;
+    font-optical-sizing: auto;
+    font-style: normal;
+    animation: blendin 1.5s ease-in-out forwards;
+    background: linear-gradient(to left, #ffa600 0%, #493116 100%);
+}
+
+/* TODO: FIX THIS */
+
+#text {
+    font-size: 3.5rem;
+    background: -webkit-linear-gradient(-45deg, #042852, #1990ff);
+    background: -o-linear-gradient(-45deg, #042852, #1990ff);
+    background: -moz-linear-gradient(-45deg, #042852, #1990ff);
+    background: linear-gradient(-45deg, #042852, #1990ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#donut, #second-model {
+    width: 100%;  /* Der Container nimmt die gesamte Breite des Bildschirms ein */
+    height: 100vh;  /* Der Container nimmt die gesamte Höhe des Bildschirms ein */
+    position: absolute;  /* Positioniert den Container auf der Seite */
+    top: 0;
+    left: 0;
+}
+
+canvas {
+    display: block; /* Verhindert, dass der Canvas zusätzliches Layout verursacht */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    max-width: 90%;
+    box-shadow: 0 5px 40px rgba(255, 255, 255, 0.2);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 2rem; /* Adjust font size */
+    transition: text-shadow 500ms;
+}
+
+.navbar ul li a:hover {
+    color: white;
+    text-shadow: 0 5px 20px;
+    transition: text-shadow 500ms;
+}
+
+.mach-mit-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.heading {
+    color: white;
+    font-size: 3rem; /* Adjust font size */
+    text-align: center;
+    background: -webkit-linear-gradient(-45deg, #042852, #1990ff);
+    background: -o-linear-gradient(-45deg, #042852, #1990ff);
+    background: -moz-linear-gradient(-45deg, #042852, #1990ff);
+    background: linear-gradient(-45deg, #042852, #1990ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.paragraph {
+    color: white;
+    font-size: 1.5rem; /* Adjust font size */
+    padding: 0 10%;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.video-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.video-overlay .play-button {
+    font-size: 32px;
+}
+
+.test {
+    margin: 0 10%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: white;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.25rem; /* Adjust font size */
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 1rem; /* Adjust font size */
+    color: black;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #218838;
+    transition: background-color 0.5s;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.navimage {
+    display: inline;
+    width: 30px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.navlink {
+    padding: 0 !important;
+}
+
+.small {
+    font-size: 3rem; /* Adjust font size */
+    font-weight: bolder;
+}
+
+.smaller {
+    font-size: 2.3rem; /* Adjust font size */
+    text-align: center;
+}
+
+.x-small {
+    font-size: 1.5rem; /* Adjust font size */
+    text-align: center;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 999;
+  }
+
+  .navbar ul.show {
+      display: flex;
+      animation: slideIn 0.5s forwards;
+  }
+  
+  .hamburger-menu {
+      display: flex;
+  }
+
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,200&display=swap');
+
+@keyframes blendin {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    color: white;
+}
+
+body {
+    font-family: Roboto;
+    font-optical-sizing: auto;
+    font-style: normal;
+    animation: blendin 1.5s ease-in-out forwards;
+    background: linear-gradient(to left, #ffa600 0%, #493116 100%);
+}
+
+/* Text style */
+#text {
+    font-size: 3.5rem;
+    background: linear-gradient(-45deg, #042852, #1990ff);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 3D model containers */
+#donut, #second-model {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Main container styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    max-width: 90%;
+    box-shadow: 0 5px 40px rgba(255, 255, 255, 0.2);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 2rem;
+    transition: text-shadow 500ms;
+}
+
+.navbar ul li a:hover {
+    color: white;
+    text-shadow: 0 5px 20px;
+    transition: text-shadow 500ms;
+}
+
+.mach-mit-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+.heading {
+    color: white;
+    text-align: center;
+    background: linear-gradient(-45deg, #042852, #1990ff);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.paragraph {
+    color: white;
+    font-size: 1.5rem;
+    padding: 0 10%;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+    /* Adjust font sizes for mobile */
+    #text {
+        font-size: 2.5rem;  /* Smaller text on mobile */
+    }
+
+    .heading {
+        font-size: 2.2rem;  /* Smaller heading on mobile */
+    }
+
+    .paragraph {
+        font-size: 1.2rem;  /* Smaller paragraph text on mobile */
+        padding: 0 5%;       /* Less padding on mobile */
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar ul.show {
+        display: flex;
+        animation: slideIn 0.5s forwards;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    /* Adjust video container for smaller screens */
+    .video-container {
+        max-width: 100%;
+    }
+    
+    /* Adjust button sizes */
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Adjust model size */
+    #donut, #second-model {
+        height: 250px;  /* Adjust model height for mobile */
+    }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+#text {
+    font-size: 4rem;
+    font-family: Arial, sans-serif;
+    position: relative;
+    opacity: 0;
+    display: inline-block; /* Sicherstellen, dass der Text korrekt angezeigt wird */
+  }
+
+  /* Keyframe für die Einflieg-Animation */
+  @keyframes flyIn {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Responsivität für kleinere Bildschirme */
+  @media (max-width: 768px) {
+    #text {
+      font-size: 3rem; /* Kleinere Schriftgröße auf Tablets */
+    }
+  }
+
+  @media (max-width: 480px) {
+    #text {
+      font-size: 2.5rem; /* Noch kleinere Schriftgröße auf Handys */
+    }
+  }
