@@ -24,7 +24,7 @@
         </div>
         <ul id="nav-links">
           <li><a href="#">Start</a></li>
-          <li><a href="#about">Innovationen für die Zukunft!</a></li>
+          <li><a href="#about">FutureLab</a></li>
           <li><a href="#project">Aktuellstes Projekt</a></li>
           <li><a href="#projects">Alle Projekte</a></li>
           <li><a href="https://www.gymnasium-langenhagen.de" class="navlink"><img class="navimage" src="./src/img/logo.png" alt="Zurück zur Homepage"></a></li>
@@ -38,7 +38,7 @@
             <h1 id="text"></h1>
         </div>
         <p class="paragraph x-small">
-            Willkommen auf der Erfindungswebseite des Gymnasiums Langenhagen!
+            Herzlich Willkommen im Future Lab - das Zuhause unserer besten Erfinder am Gymnasium Langenhagen!
             Hier präsentieren Schülerinnen und Schüler ihre kreativen und innovativen Ideen, die die Welt von morgen verändern könnten.
             Von fliegenden Autos über futuristische 3D-Druck-Projekte bis hin zu revolutionären Technologien
             – die jungen Tüftler zeigen, wie die Zukunft aussehen könnte. Lassen Sie sich von der Vielfalt an Erfindungen inspirieren,
@@ -85,6 +85,19 @@
         </p>
         <div id="second-model"></div>
     </section>
+
+    <div class="ie-warning" id="ieWarning">
+      <h1>Leider wird der Internet Explorer nicht unterstützt</h1>
+      <p>Diese Webseite funktioniert nicht korrekt im Internet Explorer. Bitte verwenden Sie einen modernen Browser wie Chrome, Firefox oder Edge, um die beste Erfahrung zu haben.</p>
+  </div>
+  
+  <script>
+      var isIE = /MSIE|Trident/.test(navigator.userAgent);
+  
+      if (isIE) {
+          document.getElementById('ieWarning').style.display = 'block';
+      }
+  </script>
 
     <script src="./src/js/main.js" type="module"></script>
 </body>

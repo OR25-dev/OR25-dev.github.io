@@ -89,16 +89,15 @@ function positionAndScaleModel(model, scene, camera) {
     const size = box.getSize(new THREE.Vector3());
     const center = box.getCenter(new THREE.Vector3());
 
-    // Skalierung des Modells anpassen (hier explizit das zweite Modell größer machen)
-    if (model === secondModel) {
-        model.scale.set(0.9, 0.9, 0.9);  // Größere Skalierung für das zweite Modell
-    } else {
-        model.scale.set(0.8, 0.8, 0.8);  // Normal für das erste Modell
-    }
+    // Skalierung des Modells auf 99% der Breite und Höhe
+    const scaleFactor = 0.99;
+    model.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
     // Berechne den Modellabstand zur Kamera
     const modelSize = Math.max(size.x, size.y, size.z);
     const fov = camera.fov * (Math.PI / 180);
+
+    // Berechne den Abstand, um Verzerrungen zu minimieren und das Modell in der Mitte zu halten
     const cameraDistance = Math.abs(modelSize / (2 * Math.tan(fov / 2)));
     camera.position.z = cameraDistance * 1.2;
     model.position.sub(center);
@@ -108,6 +107,13 @@ function positionAndScaleModel(model, scene, camera) {
     camera.position.y = 1;
     camera.lookAt(model.position);
 }
+
+// Stelle sicher, dass der Field-of-View der Kamera nicht zu extrem ist, um Verzerrungen zu vermeiden
+camera1.fov = 60;  // Verwende einen moderaten Wert, um Verzerrungen zu vermeiden
+camera2.fov = 60;
+
+camera1.updateProjectionMatrix();
+camera2.updateProjectionMatrix();
 
 // Animationsloop für das erste Modell
 function animate1() {
@@ -134,7 +140,7 @@ window.addEventListener('resize', () => {
     camera2.updateProjectionMatrix();
 });
 
-const text = "Innovationen für die Zukunft!";
+const text = "FutureLab";
 const initialDelay = 0; // milliseconds
 const letterDelay = 50; // milliseconds
 
